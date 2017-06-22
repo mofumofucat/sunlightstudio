@@ -1,0 +1,59 @@
+/*
+ * BEM関連
+ */
+@mixin e($names...) {
+  @each $name in $names {
+    &__#{$name}{
+      @content;
+    }
+  }
+}
+
+@mixin m($names...) {
+  @each $name in $names {
+    &.is-#{$name}{
+      @content;
+    }
+  }
+}
+
+
+/*
+ * コンテンツ幅の設定
+ */
+@mixin inner($type: both) {
+  @if $type == both or $type == sp {
+    margin: 0 auto;
+    width: $width_sp;
+  }
+  @if $type == both or $type == pc {
+    @include mq {
+      width: $width_pc;
+      @if $type == pc {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+
+/*
+ * メディアクエリ
+ */
+@mixin mq {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+/*
+ * clearfix
+ */
+@mixin cf {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

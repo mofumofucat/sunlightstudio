@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// 設定ファイルのインポート
+@import "_config";
+@import "_mixin";
+
+@import "base/_reset";
+@import "base/_common";
+
+// レイアウト
+@import "layout/_header";
+@import "layout/_nav";

@@ -1,0 +1,120 @@
+.l-header {
+  @include e(main) {
+    background: $color_yellow;
+    padding: 6px 0;
+    position: relative;
+    @include mq {
+      padding: 0;
+    }
+  }
+  @include e(logo) {
+    $logo_size: 415px;
+    display: block;
+    float: left;
+    width: 50%;
+    max-width: $logo_size;
+    @include mq {
+      width: $logo_size;
+    }
+  }
+  @include e(meta) {
+    display: none;
+    @include mq {
+      @include cf;
+      display: block;
+      float: right;
+    }
+  }
+  @include e(link) {
+    border-bottom: 2px solid $color_darkblue;
+    color: $color_darkblue;
+    display: block;
+    float: left;
+    font-size: 15px;
+    line-height: 1;
+    margin-right: 30px;
+    margin-top: 62px;
+    padding-bottom: 7px;
+  }
+  @include e(contact) {
+    float: left;
+    font-size: 15px;
+    margin-top: 19px;
+    @include e(btn) {
+      background: $color_darkblue;
+      color: #fff;
+      display: block;
+      line-height: 35px;
+      text-align: center;
+      width: 200px;
+      span {
+        background: url(../img/common/icon_contact.png) left center no-repeat;
+        padding-left: 33px;
+      }
+    }
+    @include e(tel) {
+      background: url(../img/common/icon_tel.png) left center no-repeat;
+      color: $color_darkblue;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 6px;
+      padding-left: 27px;
+      text-align: center;
+    }
+  }
+  @include e(lang){
+    float: left;
+    margin-left: 26px;
+    margin-top: 14px;
+    width: 112px;
+    @include e(btn){
+      background: #fff;
+      border: 1px solid $color_darkblue;
+      color: $color_darkblue;
+      display: block;
+      line-height: 23px;
+      text-align: center;
+      margin-top: 9px;
+    }
+  }
+  @include e(menu_btn) {
+    background: #fff;
+    border-radius: 3px;
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    margin: auto;
+    position: absolute;
+    right: #{(100% - $width_sp) / 2};
+    top: 0;
+    width: 32px;
+    @include mq {
+      display: none;
+    }
+    & span,
+    &:before,
+    &:after {
+      background: $color_yellow;
+      border-radius: 1.6px;
+      display: block;
+      content: "";
+      height: 3.2px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      width: 26px;
+    }
+    span {
+      bottom: 0;
+      top: 0;
+    }
+    &:before {
+      top: 7px;
+    }
+    &:after {
+      bottom: 7px;
+    }
+  }
+}
