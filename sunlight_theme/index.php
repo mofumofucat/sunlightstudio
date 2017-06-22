@@ -41,6 +41,13 @@
     </ul>
   </nav>
   <div class="container">
+    <div class="main__vis">
+      <ul class="slider center-item">
+        <li><img src="<?=get_template_directory_uri()?>/asset/img/common/main_vis01.jpg"></li>
+        <li><img src="<?=get_template_directory_uri()?>/asset/img/common/main_vis01.jpg"></li>
+        <li><img src="<?=get_template_directory_uri()?>/asset/img/common/main_vis01.jpg"></li>
+      </ul>
+    </div>
   </div><!-- end #container -->
   <footer class="l-footer">
   </footer>
@@ -49,6 +56,26 @@
 <script>window.jQuery || document.write('<script src="<?=get_template_directory_uri()?>/asset/js/jquery2.2.4.min.js"><\/script>')</script>
 <script src="<?=get_template_directory_uri()?>/asset/js/config.js"></script>
 <script src="<?=get_template_directory_uri()?>/asset/js/common/gNavController.js"></script>
+<script src="<?=get_template_directory_uri()?>/asset/js/top/slick.min.js"></script>
+<script>
+$(function() {
+  $('.center-item').slick({
+    infinite: true,
+    dots:true,
+    autoplaySpeed: 6000,
+    slidesToShow: 1,
+    centerMode: true, //要素を中央寄せ
+    centerPadding:'0px', //両サイドの見えている部分のサイズ
+    autoplay:true, //自動再生
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        centerMode: false,
+      }
+    }]
+  });
+});
+</script>
 <?php // wp_footer(); ?>
 </body>
 </html>

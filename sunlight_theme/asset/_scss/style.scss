@@ -7,6 +7,10 @@
 @import "base/_reset";
 @import "base/_common";
 
+// プラグイン
+@import "plugin/_slick";
+@import "plugin/_slick-theme";
+
 // レイアウト
 @import "layout/_header";
 @import "layout/_nav";
